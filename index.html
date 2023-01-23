@@ -1,12 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
     <title>Personal Website</title>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <section class="header" id="home">
+      <nav>
+        <a href="#">
+          <div class="logo-spc">0/TOBI</div>
+        </a>
+        <div class="navbar-link" id="navbarlink">
+          <i class="fa fa-times" onclick="hidemenu()"></i>
+          <ul>
+            <li>
+              <a href="#home">HOME</a>
+            </li>
+            <li>
+              <a href="#pictures">PICTURES</a>
+            </li>
+            <li>
+              <a href="#projects">PROJECTS</a>
+            </li>
+            <li>
+              <a href="#contact">CONTACT</a>
+            </li>
+          </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showmenu()"></i>
+      </nav>
+      <div class="about-tag">
+        <span class="text first-text">Hello i am</span>
+        <span class="text sec-text"></span>
+        <p>
+          I am an Ordinary national diploma holder, finished from Yaba college
+          of technology. I studied mechanical engineering, I am a highly
+          organized and self-driven individual, very passionate about developing
+          my career. I Love building websites which includes small business
+          sites and interactive web apps. I strive to make web and apps a
+          beautiful place. I live in Lagos, Nigeria. My programming skills cover
+          the basic language which include HTML,CSS,JAVASCRIPT currently working
+          with REACT.JS
+        </p>
+      </div>
+    </section>
+
+    <!--pictures-->
+
+    <section class="pictures-tag" id="pictures">
+      <h1>My Pictures</h1>
+      <div class="picture-grid">
+        <div class="pic-col">
+          <img src="images/my-pic2.JPG" />
+        </div>
+        <div class="pic-col">
+          <img src="images/my-pic3.JPG" />
+        </div>
+        <div class="pic-col">
+          <img src="images/my-pic4.JPG" />
+        </div>
+      </div>
+      <div class="picture-grid">
+        <div class="pic-col">
+          <img src="images/my-pic5.JPG" />
+        </div>
+        <div class="pic-col">
+          <img src="images/my-pic6.JPG" />
+        </div>
+        <div class="pic-col">
+          <img src="images/my-pic7.JPG" />
+        </div>
+      </div>
+    </section>
+
+    <section class="project-tag" id="projects">
+      <h1>My Projects</h1>
+      <p>This are some of the projects i have worked on</p>
+      <div class="project-grid">
+        <div class="project-col">
+          <h3>Tell the time</h3>
+          <button>
+            <a target="_blank" href="https://tell-the-time.netlify.app/"
+              >View Project</a
+            >
+          </button>
+        </div>
+        <div class="project-col">
+          <h3>Kanban-App</h3>
+          <button>
+            <a target="_blank" href="https://kanban-brickerz.netlify.app/"
+              >View Project</a
+            >
+          </button>
+        </div>
+        <div class="project-col">
+          <h3>Project-Tokyo</h3>
+          <button>
+            <a target="_blank" href="https://project-tokyo.netlify.app/"
+              >View Project</a
+            >
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-tag" id="contact">
+      <h1>Contact Me</h1>
+      <p>You can contact me on</p>
+      <div class="contact-col">
+        <p>
+          <i class="fa fa-phone fa-fw"></i
+          ><a href="tel:+2347080454590">07080454590</a>
+        </p>
+        <p>
+          <i class="fa fa-linkedin fa-fw"></i
+          ><a href="http://www.linkedin.com/in/odeyemi-oluwatobiloba-581246249">
+            Odeyemi Oluwatobiloba</a
+          >
+        </p>
+        <p>
+          <i class="fa fa-github fa-fw"></i
+          ><a href="https://github.com/Odeyemitobi"> Odeyemitobi</a>
+        </p>
+        <p>
+          <i class="fa fa-envelope fa-fw"></i
+          ><a
+            href="mailto:odeyemioluwatobiloba11@gmail.com?subject=subject text"
+          >
+            odeyemioluwatobiloba11@gmail.com</a
+          >
+        </p>
+      </div>
+    </section>
+
+    <section class="footer">
+      <h3>&copy; 2023 TOBYLOBA</h3>
+    </section>
+
+    <!--javascript for name animation-->
+    <script>
+      const text = document.querySelector(".sec-text");
+
+      const textLoad = () => {
+        setTimeout(() => {
+          text.textContent = "Odeyemi Oluwatobiloba";
+        }, 0);
+      };
+
+      textLoad();
+    </script>
+
+    <!---javascript for toggle -->
+    <script>
+      var navbarlink = document.getElementById("navbarlink");
+      function showmenu() {
+        navbarlink.style.right = "0";
+      }
+      function hidemenu() {
+        navbarlink.style.right = "-200px";
+      }
+    </script>
+  </body>
 </html>
