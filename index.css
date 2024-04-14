@@ -121,7 +121,7 @@ nav .logo-spc {
       display: block;
   }
   .navbar-link{
-      position: absolute; 
+      position: absolute;
       background: #4070f4;
       height: 100vh;
       width: 200px;
@@ -204,13 +204,16 @@ h1 {
 
 .project-grid {
   margin-top: 5%;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 30px;
+  align-items: start;
 }
 
 .project-col {
   flex-basis: 31%;
   background: white;
+  border: 1px solid gray;
   border-radius: 10px;
   margin-bottom: 5%;
   padding: 20px 12px;
@@ -242,7 +245,8 @@ h1 {
 
 @media(max-width: 700px){
   .project-grid{
-      flex-direction: column;
+    grid-template-columns: 1fr;
+    grid-row-gap: 30px;
   }
 }
 
